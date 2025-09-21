@@ -51,7 +51,7 @@ pipeline:
                   name: docker_build
                   spec:
                     connectorRef: gohelloworldserver
-                    repo: whewatt/worldwelcome
+                    repo: whewatt/welcomeworld
                     tags:
                       - latest
                     caching: true
