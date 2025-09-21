@@ -50,8 +50,8 @@ pipeline:
                   identifier: dockerbuild
                   name: docker_build
                   spec:
-                    connectorRef: <+input>
-                    repo: worldwelcome
+                    connectorRef: gohelloworldserver
+                    repo: whewatt/worldwelcome
                     tags:
                       - latest
                     caching: true
