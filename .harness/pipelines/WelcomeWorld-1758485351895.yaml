@@ -72,15 +72,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: goHelloWorldServer
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+            serviceRef: WelcomeWorld
           environment:
             environmentRef: harnessdevenv
             deployToAll: false
