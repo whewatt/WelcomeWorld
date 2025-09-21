@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_whewatt_WelcomeWorld_1758485358748-push-trigger-input-set
+  identifier: Build_whewatt_WelcomeWorld_1758485358748pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_whewatt_WelcomeWorld_1758485358748
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
