@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: welcomeworld-server
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: welcomeworld-server
+  template:
+    metadata:
+      labels:
+        app: welcomeworld-server
+    spec:
+      containers:
+      - image: docker.io/whewatt/welcomeworldserver:latest
+        name: welcomeworld-server
+        ports:
+        - containerPort: 80
