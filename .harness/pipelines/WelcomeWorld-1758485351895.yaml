@@ -47,16 +47,15 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
-                  spec:
-                    connectorRef: gohelloworldserver
-                    repo: whewatt/welcomeworld
-                    tags:
-                      - latest
-                    caching: true
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
+                  name: Docker Build Template
+                  identifier: Docker_Build_Template
+                  template:
+                    templateRef: Docker_Build
+                    versionLabel: Version1
+                    templateInputs:
+                      type: BuildAndPushDockerRegistry
+                      spec:
+                        repo: <+input>
           platform:
             arch: Amd64
             os: Linux
